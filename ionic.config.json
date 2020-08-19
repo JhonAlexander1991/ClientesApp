@@ -1,0 +1,7 @@
+{
+  "name": "BDclientes",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
