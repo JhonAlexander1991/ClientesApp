@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar color ="primary">
+    <ion-title>Nuevo cliente</ion-title>
+    <ion-buttons slot="primary">
+    	<ion-back-button text="Atrás" fill="outline"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+ <ion-card>
+    <ion-item>
+      <ion-label position="stacked"> Nombre completo </ion-label>
+      <ion-input placeholder="Nombre completo" [(ngModel)]="name_customer"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked"> Numero de documento </ion-label>
+      <ion-input placeholder="Numero de documento" [(ngModel)]="nit_customer"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked"> Email </ion-label>
+      <ion-input placeholder="Email" [(ngModel)]="email_customer"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label position="stacked"> Fecha de nacimiento</ion-label>
+        <ion-input placeholder="yyyymmdd" [(ngModel)]="birth_date"></ion-input>
+      </ion-item>
+
+
+    <ion-button expand="block" padding color="tertiary" *ngIf="!id" (click)="createdProses()" fill="outline">Guardar</ion-button>
+    <ion-button expand="block" padding color="tertiary" *ngIf="id>=1" (click)="updateProses()" fill="outline">Actualizar</ion-button>
+  </ion-card>
+  
+</ion-content>
